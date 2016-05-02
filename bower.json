@@ -1,0 +1,23 @@
+{
+  "name": "angular-my-credit-card-directive",
+  "description": "credit card identifier",
+  "main": "directives/credit-card-directive.js",
+  "authors": [
+    "Soham Chakraborty"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "credit",
+    "card",
+    "angular"
+  ],
+  "homepage": "https://github.com/syosoh06/egen-fe-challenge",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
