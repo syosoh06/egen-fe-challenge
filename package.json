@@ -1,0 +1,20 @@
+{
+  "name": "credit-card-directive-app",
+  "version": "1.0.0",
+  "description": "credit card identifier",
+  "main": "app.js",
+  "dependencies": {
+    "angular": "^1.5.5"
+  },
+  "devDependencies": {
+    "jasmine-core": "latest",
+    "karma": "latest",
+    "karma-chrome-launcher": "latest",
+    "karma-jasmine": "latest"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "author": "Soham Chakraborty",
+  "license": "ISC"
+}
