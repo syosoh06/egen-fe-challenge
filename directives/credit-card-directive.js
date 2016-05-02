@@ -18,9 +18,7 @@ function creditCardIdentifier(creditCardFactory) {
     var directive = {
         restrict: 'E',
         templateUrl: 'templates/credit-card-directive-template.html',
-        scope: {
-            max: '='
-        },
+        scope: { },
         require: 'ngModel',
         link: linkFunc
     };
