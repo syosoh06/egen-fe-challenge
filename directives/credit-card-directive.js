@@ -18,17 +18,11 @@ function creditCardIdentifier(creditCardFactory) {
     var directive = {
         restrict: 'E',
         templateUrl: 'templates/credit-card-directive-template.html',
-        /*template: '<textarea ng-model="foo"></textarea>',*/
         scope: {
             max: '='
         },
         require: 'ngModel',
-        link: linkFunc/*,
-        controller: 'ExampleController',
-        // note: This would be 'ExampleController' (the exported controller name, as string)
-        // if referring to a defined controller in its separate file.
-        controllerAs: 'vm',
-        bindToController: true // because the scope is isolated*/
+        link: linkFunc
     };
 
     return directive;
@@ -38,12 +32,20 @@ function creditCardIdentifier(creditCardFactory) {
         scope.cardType=creditCardFactory.getCardType();
         scope.logoUrl=creditCardFactory.getLogoUrl();
 
-        el.on("input", function() { // (or use "change" if you don't need to check every single keystroke)
+        el.bind("keyup", function() {
+            changeCardLogoBasedOnInputChanges();
+        });
+
+        el.on('paste', function(){
+            changeCardLogoBasedOnInputChanges();
+        });
+
+        function changeCardLogoBasedOnInputChanges(){
             console.log(scope.ccnumber);
             creditCardFactory.identifyCardTypeAndSetLogo(scope.ccnumber);
             scope.cardType = creditCardFactory.getCardType();
             scope.logoUrl = creditCardFactory.getLogoUrl();
-        })
+        }
     }
     
     

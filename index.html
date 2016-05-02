@@ -8,13 +8,12 @@
     <script src="directives/credit-card-directive.js"></script>
     <script src="factories/credit-card-factory.js"></script>
     <script src="controllers/mainController.js"></script>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body ng-controller="mainController as vm">
-<div style="background-color: #E6E3EC;
-padding: 5px 2px 12px 5px;
-    width: 260px;">
-    <p style="margin: 2px;">
-        <span style="color: deepskyblue;">*</span>
+<div class="directive_container">
+    <p>
+        <span class="span_star_marker">*</span>
         <span >CARD NUMBER</span>
     </p>
     <credit-card-identifier ng-model="vm.cardNumber"></credit-card-identifier>

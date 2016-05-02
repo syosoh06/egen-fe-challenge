@@ -41,14 +41,14 @@ function creditCardFactory() {
         var re = new RegExp("^4");
         if(number.match(re) != null){
             setLogoUrl("creditcards/visa.png");
-            setCardType("visa")
+            setCardType("visa");
             return ;
         }
 
         re = new RegExp("^5[1-5]");
         if(number.match(re) != null) {
             setLogoUrl("creditcards/mastercard.png");
-            setCardType("mastercard")
+            setCardType("mastercard");
             return ;
         }
 
@@ -66,7 +66,12 @@ function creditCardFactory() {
             return ;
         }
 
-
+        re = new RegExp("^(5018|5020|5038|6304|6759|6761|6763)[0-9]{8,15}$");
+        if(number.match(re) != null){
+            setLogoUrl("creditcards/maestro.png");
+            setCardType("maestro");
+            return ;
+        }
 
         if(getCardType() !== "visa" || getCardType() !== "amex" || getCardType() !== "discover" || getCardType() !== "mastercard"){
             setLogoUrl("creditcards/credit.png");

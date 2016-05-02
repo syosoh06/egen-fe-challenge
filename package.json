@@ -4,13 +4,15 @@
   "description": "credit card identifier",
   "main": "app.js",
   "dependencies": {
-    "angular": "^1.5.5"
+    "angular": "^1.5.5",
+    "jquery": "^2.2.3"
   },
   "devDependencies": {
     "jasmine-core": "latest",
     "karma": "latest",
     "karma-chrome-launcher": "latest",
-    "karma-jasmine": "latest"
+    "karma-jasmine": "latest",
+    "karma-ng-html2js-preprocessor": "*"
   },
   "scripts": {
     "test": "karma start karma.conf.js"
